@@ -1,11 +1,13 @@
 # ─── Environment / Secrets ─────────────────────────────────────────────────
-# Hiçbir .env dosyası GitHub'a çıkmamalı!
+# Gerçek .env dosyaları GitHub'a çıkmamalı — .env.example dosyaları commit'lenir
 .env
 .env.local
 .env.*.local
 .env.development
 .env.production
 .env.test
+# .env.example izin verilir (template olarak)
+!.env.example
 
 # ─── Dependencies ───────────────────────────────────────────────────────────
 node_modules/
