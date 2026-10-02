@@ -1,0 +1,36 @@
+# ─── Environment / Secrets ─────────────────────────────────────────────────
+# Hiçbir .env dosyası GitHub'a çıkmamalı!
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# ─── Dependencies ───────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ─── Build Outputs ──────────────────────────────────────────────────────────
+dist/
+build/
+.next/
+out/
+
+# ─── TypeScript ─────────────────────────────────────────────────────────────
+*.tsbuildinfo
+tsconfig.build.tsbuildinfo
+
+# ─── Testing & Coverage ─────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ─── OS / Editor ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.pem
+.idea/
+.vscode/
+*.swp
+*.swo
