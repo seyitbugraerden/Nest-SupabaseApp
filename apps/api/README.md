@@ -17,6 +17,24 @@ pnpm --filter api add @neondatabase/serverless drizzle-orm dotenv
 pnpm --filter api add -D drizzle-kit
 ```
 
+### pnpm ile eklenen paketler
+
+| Paket | Kurulum komutu (depo kökünden) | Görevi |
+| --- | --- | --- |
+| `@neondatabase/serverless` | `pnpm --filter api add @neondatabase/serverless` | Neon PostgreSQL bağlantısı için HTTP istemcisi. |
+| `drizzle-orm` | `pnpm --filter api add drizzle-orm` | TypeScript ile tablo şemalarını ve tipli veritabanı sorgularını tanımlar. |
+| `dotenv` | `pnpm --filter api add dotenv` | Drizzle yapılandırmasında `.env` dosyasını `process.env` içine yükler. |
+| `drizzle-kit` | `pnpm --filter api add -D drizzle-kit` | Migration üretme ve uygulama, şema senkronizasyonu ve Studio komutlarını sağlar. |
+
+`--filter api`, paketin yalnızca API uygulamasına eklenmesini sağlar. `-D`, paketi geliştirme bağımlılığı olarak kaydeder. `pnpm install` ise manifest ve kilit dosyasında kayıtlı çalışma alanı bağımlılıklarını kurar.
+
+Terminal zaten `apps/api` klasöründeyse aynı paketler şu komutlarla eklenebilir:
+
+```bash
+pnpm add @neondatabase/serverless drizzle-orm dotenv
+pnpm add -D drizzle-kit
+```
+
 Paketler mevcut `package.json` ve `pnpm-lock.yaml` içinde kayıtlıdır; yeniden eklemek gerekmez. `pnpm-workspace.yaml` dosyasında `esbuild` kurulum betiği için `allowBuilds: false` kaydı eklendi.
 
 ## Ortam değişkenleri
