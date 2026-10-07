@@ -13,6 +13,10 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
     "lint": "oxlint --type-aware src/ test/",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "test:watch": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --watch",
@@ -21,6 +25,7 @@
     "test:e2e": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
     "@nestjs/common": "^12.0.1",
     "@nestjs/config": "^12.0.1",
     "@nestjs/core": "^12.0.1",
@@ -28,6 +33,8 @@
     "@supavolt/types": "workspace:*",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.15.1",
+    "dotenv": "^18.0.5",
+    "drizzle-orm": "^0.45.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
@@ -40,6 +47,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
     "@types/supertest": "^7.0.0",
+    "drizzle-kit": "^0.31.11",
     "jest": "^30.0.0",
     "oxlint": "^1.58.0",
     "oxlint-tsgolint": "^7.0.2001",
